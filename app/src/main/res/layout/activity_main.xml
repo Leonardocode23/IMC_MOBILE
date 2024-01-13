@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="-2dp"
+                tools:layout_editor_absoluteX="162dp" android:visibility="invisible"/>
+        <TextView
+                android:text="@string/CalculoIMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo"
+                android:textSize="24sp" android:fontFamily="monospace"
+                android:textColor="#09041B" android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible" app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintTop_toBottomOf="@+id/button"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+                app:layout_constraintBottom_toTopOf="@+id/textView4" android:visibility="invisible"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.186"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView4"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+                android:visibility="invisible" app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintVertical_bias="0.163"/>
+        <TextView
+                android:text="@string/Altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo2"
+                android:textSize="24sp" android:fontFamily="monospace"
+                android:textColor="#09041B" android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.192"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_valorAltura"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_titulo4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo2" app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintVertical_bias="0.48"/>
+        <TextView
+                android:text="@string/Peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo4"
+                android:textSize="24sp" android:fontFamily="monospace"
+                android:textColor="#09041B" android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo2" app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintVertical_bias="0.417"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_valorAltura3"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo4" app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintVertical_bias="0.242"/>
+        <Button
+                android:text="Calcular"
+                android:layout_width="155dp"
+                android:layout_height="57dp" android:id="@+id/buttonCalcular"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" app:layout_constraintTop_toBottomOf="@+id/input_valorAltura3"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
